@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "projects": {
+      "mediq": {
+        "src": "apps/mediq",
+        "buildCommand": "nx build mediq",
+        "outputDirectory": "dist/apps/mediq"
+      },
+      "server": {
+        "src": "apps/server",
+        "buildCommand": "nx build server",
+        "outputDirectory": "dist/apps/server",
+        "routes": [
+          {
+            "src": "/(.*)",
+            "dest": "/api/$1"
+          }
+        ]
+      }
+    }
+  }
+  
